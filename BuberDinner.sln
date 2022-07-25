@@ -5,19 +5,19 @@ VisualStudioVersion = 17.3.32714.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{60A9E35F-7EA9-4BEE-8BA5-4463107748FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuberDinner.Api", "BuberDinner.Api\BuberDinner.Api.csproj", "{3B00C176-31EF-4FBF-9DC6-47E70ED5741B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuberDinner.Api", "BuberDinner.Api\BuberDinner.Api.csproj", "{3B00C176-31EF-4FBF-9DC6-47E70ED5741B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{7207D163-58B8-4B99-8706-7B1A07FA587D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{CB73C622-8EF2-4ED1-8CF8-1246B4F7A753}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuberDinner.Contracts", "BuberDinner.Contracts\BuberDinner.Contracts.csproj", "{D1ADE81A-7203-485F-AD59-ADF9CDD3DE0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuberDinner.Contracts", "BuberDinner.Contracts\BuberDinner.Contracts.csproj", "{D1ADE81A-7203-485F-AD59-ADF9CDD3DE0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuberDinner.Infrastructure", "BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj", "{3B6325F8-911A-4B42-8A59-A7559337C074}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuberDinner.Infrastructure", "BuberDinner.Infrastructure\BuberDinner.Infrastructure.csproj", "{3B6325F8-911A-4B42-8A59-A7559337C074}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuberDinner.Domain", "BuberDinner.Domain\BuberDinner.Domain.csproj", "{E61798D4-3D01-4D13-A34D-C77966525233}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuberDinner.Domain", "BuberDinner.Domain\BuberDinner.Domain.csproj", "{E61798D4-3D01-4D13-A34D-C77966525233}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuberDinner.Application", "BuberDinner.Application\BuberDinner.Application.csproj", "{483352EB-BB88-4B1E-A974-A1A3D86E411B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuberDinner.Application", "BuberDinner.Application\BuberDinner.Application.csproj", "{483352EB-BB88-4B1E-A974-A1A3D86E411B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requests", "Requests", "{10413EC1-8A1D-4C07-A3C6-A99BA8C1BC9F}"
 EndProject
@@ -29,6 +29,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{FDA66AF5-CF99-48F5-95B1-A80A8DC53BA9}"
 	ProjectSection(SolutionItems) = preProject
 		Api.md = Api.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authentication", "Authentication", "{2740A8F5-BD3F-4A42-B56D-325C57B88E5C}"
+	ProjectSection(SolutionItems) = preProject
+		Login.http = Login.http
+		Register.http = Register.http
 	EndProjectSection
 EndProject
 Global
@@ -68,6 +74,7 @@ Global
 		{E61798D4-3D01-4D13-A34D-C77966525233} = {7207D163-58B8-4B99-8706-7B1A07FA587D}
 		{483352EB-BB88-4B1E-A974-A1A3D86E411B} = {7207D163-58B8-4B99-8706-7B1A07FA587D}
 		{1E07C954-94E3-43F4-92CB-835BA11612AC} = {10413EC1-8A1D-4C07-A3C6-A99BA8C1BC9F}
+		{2740A8F5-BD3F-4A42-B56D-325C57B88E5C} = {10413EC1-8A1D-4C07-A3C6-A99BA8C1BC9F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AA847E6F-3C15-4CA1-AB14-706041B4CB59}
