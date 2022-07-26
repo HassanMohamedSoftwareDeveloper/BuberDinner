@@ -24,12 +24,15 @@ public class AuthenticationController : ControllerBase
     [HttpPost("register")]
     public IActionResult Register(RegisterRequest request)
     {
-        OneOf.OneOf<AuthenticationResult, IError> registerResult = _authenticationService.Register(request.FirstName, request.LastName, request.Email, request.Password);
+        FluentResults.Result<AuthenticationResult> registerResult = _authenticationService.Register(request.FirstName, request.LastName, request.Email, request.Password);
+        if (registerResult.IsSuccess)
+            return Ok(MapAuthResult(registerResult.Value));
 
-        return registerResult.Match(
-            authResult => Ok(MapAuthResult(authResult)),
-            error => Problem(statusCode: (int)error.StatusCode, title: error.ErrorMessage)
-            );
+        var firstError = registerResult.Errors.First();
+        if (firstError is DuplicateEmailError)
+            Problem(statusCode: StatusCodes.Status409Conflict, title: "Email already exists.");
+
+        return Problem();
     }
 
     private static AuthenticationResponse MapAuthResult(AuthenticationResult authResult)
