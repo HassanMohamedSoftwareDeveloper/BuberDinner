@@ -1,5 +1,4 @@
-﻿using BuberDinner.Application.Common.Errors;
-using Microsoft.AspNetCore.Diagnostics;
+﻿using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BuberDinner.Api.Controllers;
@@ -14,7 +13,7 @@ public class ErrorController : ControllerBase
 
         var (statusCode, message) = exception switch
         {
-            IServiceException serviceException => ((int)serviceException.StatusCode, serviceException.ErrorMessage),
+            //IServiceException serviceException => ((int)serviceException.StatusCode, serviceException.ErrorMessage),
             _ => (StatusCodes.Status500InternalServerError, "An unexpected error occured.")
         };
         return Problem(statusCode: statusCode, title: message);
